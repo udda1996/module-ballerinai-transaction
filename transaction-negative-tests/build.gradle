@@ -27,15 +27,15 @@ configurations {
 }
 
 dependencies {
-    compile group: 'org.ballerinalang', name: 'ballerina-runtime', version: "${ballerinaLangVersion}"
+    implementation group: 'org.ballerinalang', name: 'ballerina-runtime', version: "${ballerinaLangVersion}"
     jbalTools ("org.ballerinalang:jballerina-tools:${ballerinaLangVersion}") {
         transitive = false
     }
     externalJars (group: 'io.ballerina.stdlib', name: 'io-native', version: "${stdlibIoVersion}") {
         transitive = false
     }
-    compile project(':transaction-native')
-    compile project(':transaction-test-utils')
+    implementation project(':transaction-native')
+    implementation project(':transaction-test-utils')
 }
 
 clean {
